@@ -1,0 +1,189 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="variables_set" id=".7Iz#C2IjeyKr~6AISy+" x="41" y="33">
+    <field name="VAR">esq</field>
+    <value name="VALUE">
+      <block type="variables_set_type" id="H9NBh*!u1/Jy5%8]WCvV">
+        <field name="VARIABLE_SETTYPE_TYPE">BOOLEAN</field>
+        <value name="VARIABLE_SETTYPE_INPUT">
+          <block type="grove_line_finder" id="V(s@Ng7S8_Ld4deSz9nW">
+            <field name="CONNECTOR">15</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id=")x?,rT+h~A/pT(@yNpGD">
+        <field name="VAR">meio</field>
+        <value name="VALUE">
+          <block type="variables_set_type" id="+GsXkLucR`f`+B79wU!;">
+            <field name="VARIABLE_SETTYPE_TYPE">BOOLEAN</field>
+            <value name="VARIABLE_SETTYPE_INPUT">
+              <block type="grove_line_finder" id="Q~@h:`9%bst,lO?csR%I">
+                <field name="CONNECTOR">16</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="^XT)`d!J4:%YJDwy/z(K">
+            <field name="VAR">dir</field>
+            <value name="VALUE">
+              <block type="variables_set_type" id="5DZo}#iQNh#6D0brTs}k">
+                <field name="VARIABLE_SETTYPE_TYPE">BOOLEAN</field>
+                <value name="VARIABLE_SETTYPE_INPUT">
+                  <block type="grove_line_finder" id="lwB4Q1:,5Q_q[pL{-;-r">
+                    <field name="CONNECTOR">17</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="controls_if" id="L-#@b5pnAaY@gz?kP{,U">
+                <value name="IF0">
+                  <block type="logic_operation" id="~5G4OXHf_Y:VbVJ8uNRt">
+                    <field name="OP">AND</field>
+                    <value name="A">
+                      <block type="variables_get" id="B|#tQF_XY/4waW%zf^p+">
+                        <field name="VAR">esq</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="logic_operation" id="a}S:F1FG}h]+DOv*FFQK">
+                        <field name="OP">AND</field>
+                        <value name="A">
+                          <block type="logic_negate" id="s1k;~#WknrS9^G3u?((%">
+                            <value name="BOOL">
+                              <block type="variables_get" id="N%^G]8S0k~lDNO~LO1X?">
+                                <field name="VAR">meio</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="variables_get" id="6+^fCa*OAhy=#jlt@8RR">
+                            <field name="VAR">dir</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="arduino_s" id="#Rr.-,`SlqC^bBPyuc}_">
+                    <field name="DIRECTION">forward</field>
+                    <value name="SPEEDA">
+                      <block type="math_number" id="-zb+sTA(!jRtyj2[nEV/">
+                        <field name="NUM">200</field>
+                      </block>
+                    </value>
+                    <value name="SPEEDB">
+                      <block type="math_number" id="-Kbh4ikXoIa]p0.OvKj_">
+                        <field name="NUM">200</field>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+                <next>
+                  <block type="controls_if" id="X2wl9kF7=Y,y#/::qx=?">
+                    <value name="IF0">
+                      <block type="logic_operation" id="`(nx/S7Zo85+;aku%[@E">
+                        <field name="OP">AND</field>
+                        <value name="A">
+                          <block type="logic_negate" id="4dJcCB-Rd(_%;YZ8!*{W">
+                            <value name="BOOL">
+                              <block type="variables_get" id="OWhmZdT~sQr[siH~(3YY">
+                                <field name="VAR">esq</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="logic_operation" id="e+yc*4^u6f_(U7F/{SLE">
+                            <field name="OP">AND</field>
+                            <value name="A">
+                              <block type="variables_get" id="fPl.H8y_a5z#WBC@y)wC">
+                                <field name="VAR">meio</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="variables_get" id="~8L{0S4u9|rVA*ej;wHP">
+                                <field name="VAR">dir</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="arduino_s" id="m]O29581*b-qcQQ=Ri;3">
+                        <field name="DIRECTION">left</field>
+                        <value name="SPEEDA">
+                          <block type="math_number" id="6-R}{zlGY[i#@3i5~D`q">
+                            <field name="NUM">0</field>
+                          </block>
+                        </value>
+                        <value name="SPEEDB">
+                          <block type="math_number" id="U/Cpi,sX7AGx]h_x)Hkk">
+                            <field name="NUM">200</field>
+                          </block>
+                        </value>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="controls_if" id="3LyXZ/WJ;[Fl:b}%p`]d">
+                        <value name="IF0">
+                          <block type="logic_operation" id="f(4P/b#Nu~L|R%:?lc.u">
+                            <field name="OP">AND</field>
+                            <value name="A">
+                              <block type="variables_get" id=")i;c4XG[~u55TMwd)]~4">
+                                <field name="VAR">esq</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="logic_operation" id="-u4hK4@@mfDQ;)e=0,p@">
+                                <field name="OP">AND</field>
+                                <value name="A">
+                                  <block type="variables_get" id="N:-;^tmUX6;TA-qJCFiG">
+                                    <field name="VAR">meio</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="logic_negate" id="*_;qr@}S;%s!6`mL!,OD">
+                                    <value name="BOOL">
+                                      <block type="variables_get" id="PbDEa|iJm|j=*:s6?jc@">
+                                        <field name="VAR">dir</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="DO0">
+                          <block type="arduino_s" id="OclN92eC;l3lb;NyiLIh">
+                            <field name="DIRECTION">right</field>
+                            <value name="SPEEDA">
+                              <block type="math_number" id=":bxx|M3i;52Gn.jDqaPz">
+                                <field name="NUM">200</field>
+                              </block>
+                            </value>
+                            <value name="SPEEDB">
+                              <block type="math_number" id="cf2Z9:jrL:,,u9*h:eCl">
+                                <field name="NUM">0</field>
+                              </block>
+                            </value>
+                          </block>
+                        </statement>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

@@ -1,0 +1,96 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="dfrobot_s" id="ysl1AFbBNKHWh:r43V:s" x="65" y="19">
+    <field name="DIRECTION">forward</field>
+    <value name="SPEEDA">
+      <block type="math_number" id="/:S*XL(8RX05;vx=(.s)">
+        <field name="NUM">200</field>
+      </block>
+    </value>
+    <value name="SPEEDB">
+      <block type="math_number" id="CG|w`Ou3y!hOe/?i0_xL">
+        <field name="NUM">200</field>
+      </block>
+    </value>
+    <next>
+      <block type="controls_if" id="6qz%DRriZ]DhP6`@dfpL">
+        <value name="IF0">
+          <block type="logic_compare" id="`?8d|wLi7,Z[W}~oGE%d">
+            <field name="OP">LT</field>
+            <value name="A">
+              <block type="grove_ultrasonic_ranger" id="hRTYOVt~oTbTLrtqNjOq">
+                <field name="CONNECTOR">15</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="gK(3u[qv%NS86F^SKNl-">
+                <field name="NUM">20</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="dfrobot_s" id="WXh=p2@^c_Qd4yBUD2nz">
+            <field name="DIRECTION">stop</field>
+            <next>
+              <block type="time_delay" id="%.5[RS:uA_XK=yd0-@!%">
+                <value name="DELAY_TIME_MILI">
+                  <block type="math_number" id="7]m.u_y:P2DlL)6rFb[(">
+                    <field name="NUM">1000</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="dfrobot_s" id="ci)K1Q570E^jp3a]j%JR">
+                    <field name="DIRECTION">backward</field>
+                    <value name="SPEEDA">
+                      <block type="math_number" id="+HSlIRvQL]vB4R-edVZI">
+                        <field name="NUM">150</field>
+                      </block>
+                    </value>
+                    <value name="SPEEDB">
+                      <block type="math_number" id="nj%KwNc;Bj/5a?XqT/Ml">
+                        <field name="NUM">150</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="time_delay" id="kh(i-IfL*s~I.AU5;~54">
+                        <value name="DELAY_TIME_MILI">
+                          <block type="math_number" id="@VtB^1N0-r3At_B!cwqm">
+                            <field name="NUM">1000</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="dfrobot_s" id=",x_0ZFq{}y5p3ZZN*I.D">
+                            <field name="DIRECTION">right</field>
+                            <value name="SPEEDA">
+                              <block type="math_number" id="QaHgvnI^:3rz627VhmAN">
+                                <field name="NUM">150</field>
+                              </block>
+                            </value>
+                            <value name="SPEEDB">
+                              <block type="math_number" id="vu|/fOecI[Mk^oi8=rZx">
+                                <field name="NUM">150</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="time_delay" id="@b*j.%Sc]M0w,]t|4j22">
+                                <value name="DELAY_TIME_MILI">
+                                  <block type="math_number" id="iuqhwbL-FV72NS#0~Uyi">
+                                    <field name="NUM">500</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>

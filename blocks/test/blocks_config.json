@@ -1,0 +1,15 @@
+{
+    "categoryName": "Test blocks",
+    "description": "Test blocks to demonstrate the feature.",
+    "languages": ["en", "es"],
+    "toolboxName": "Test",
+    "toolbox": [
+        "<category>",
+        "  <block type=\"ardublockly_name_top\"></block>",
+		"  <block type=\"dfrobot_s\"></block>",
+		"  <block type=\"arduino_s\"></block>",
+		"  <block type=\"serial_read\"></block>",
+		"  <block type=\"serial_available\"></block>",
+        "</category>"
+    ]
+}

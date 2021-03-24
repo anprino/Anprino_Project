@@ -1,0 +1,57 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="arduino_s" id=";~?#g+S.F]JV|b=yKA[+" x="101" y="-88">
+    <field name="DIRECTION">forward</field>
+    <value name="SPEEDA">
+      <block type="math_number" id=",eI;_)1WZMr/7yV0kUQ(">
+        <field name="NUM">200</field>
+      </block>
+    </value>
+    <value name="SPEEDB">
+      <block type="math_number" id="xy1?kZ}.Ml%t_lmBq?0#">
+        <field name="NUM">200</field>
+      </block>
+    </value>
+    <next>
+      <block type="time_delay" id="*C],(M+5+t7?vBh[uA8r">
+        <value name="DELAY_TIME_MILI">
+          <block type="math_number" id="kVc09XmbBfU?S0*l]{JC">
+            <field name="NUM">2000</field>
+          </block>
+        </value>
+        <next>
+          <block type="arduino_s" id="F(KPrpuQePTNiporUHRk">
+            <field name="DIRECTION">stop</field>
+            <next>
+              <block type="time_delay" id="B!z}7(WFmd9]CTiH@;,c">
+                <value name="DELAY_TIME_MILI">
+                  <block type="math_number" id="i|}mra:P,f7S`Dte@^ud">
+                    <field name="NUM">1000</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="arduino_s" id="u48pdW^pPi,iPP4nAt(z">
+                    <field name="DIRECTION">right</field>
+                    <value name="SPEEDA">
+                      <block type="math_number" id=".QB_JFFmScs=4G/VcnE]">
+                        <field name="NUM">200</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="time_delay" id="`(!t[T[]Ga[E60X.Tlnb">
+                        <value name="DELAY_TIME_MILI">
+                          <block type="math_number" id="Lf6n=2z0f2v=7!e|WQ[y">
+                            <field name="NUM">500</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
